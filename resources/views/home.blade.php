@@ -20,7 +20,15 @@
                                     <img src="{{asset('storage/'.$hombre->imagen)}}" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <h5 class="card-title">REF: {{$hombre->codigo}}</h5>
+                                        <p>{{$hombre->nombre}}</p>
+                                        <p>Precio: ${{$hombre->precio}}</p>
+                                        @if ($hombre->stock > 0)
+                                        <p>Stock: {{$hombre->stock}}</p>
                                         <a href="#" class="btn btn-primary">Comprar</a>
+                                        @else
+                                        <p>Stock <span class="badge bg-danger">Agotado</span></p>
+                                        <a href="#" class="btn btn-primary disabled" tabindex="-1" role="button" aria-disabled="true">Comprar</a>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
@@ -35,7 +43,15 @@
                                     <img src="{{asset('storage/'.$mujer->imagen)}}" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <h5 class="card-title">REF: {{$mujer->codigo}}</h5>
+                                        <p>{{$mujer->nombre}}</p>
+                                        <p>Precio: ${{$mujer->precio}}</p>
+                                        @if ($mujer->stock > 0)
+                                        <p>Stock: {{$mujer->stock}}</p>
                                         <a href="#" class="btn btn-primary">Comprar</a>
+                                        @else
+                                        <p>Stock <span class="badge bg-danger">Agotado</span></p>
+                                        <a href="#" class="btn btn-primary disabled" tabindex="-1" role="button" aria-disabled="true">Comprar</a>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
@@ -50,7 +66,15 @@
                                     <img src="{{asset('storage/'.$niño->imagen)}}" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <h5 class="card-title">REF: {{$niño->codigo}}</h5>
+                                        <p>{{$niño->nombre}}</p>
+                                        <p>Precio: ${{$niño->precio}}</p>
+                                        @if ($niño->stock > 0)
+                                        <p>Stock: {{$niño->stock}}</p>
                                         <a href="#" class="btn btn-primary">Comprar</a>
+                                        @else
+                                        <p>Stock <span class="badge bg-danger">Agotado</span></p>
+                                        <a href="#" class="btn btn-primary disabled" tabindex="-1" role="button" aria-disabled="true">Comprar</a>
+                                        @endif
                                     </div>
                                 </div>
                             </div>

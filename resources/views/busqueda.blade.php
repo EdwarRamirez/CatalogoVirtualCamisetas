@@ -128,7 +128,15 @@
                                 <img src="{{asset('storage/'.$producto->imagen)}}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title">REF: {{$producto->codigo}}</h5>
+                                    <p>{{$producto->nombre}}</p>
+                                    <p>Precio: ${{$producto->precio}}</p>
+                                    @if ($producto->stock > 0)
+                                    <p>Stock: {{$producto->stock}}</p>
                                     <a href="#" class="btn btn-primary">Comprar</a>
+                                    @else
+                                    <p>Stock <span class="badge bg-danger">Agotado</span></p>
+                                    <a href="#" class="btn btn-primary disabled" tabindex="-1" role="button" aria-disabled="true">Comprar</a>
+                                    @endif
                                 </div>
                             </div>
                         </div>
