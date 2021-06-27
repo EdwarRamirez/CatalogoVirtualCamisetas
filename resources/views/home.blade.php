@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="container">
+    <input type="hidden" id="produtosComprados" name="produtosComprados" value="{{$productos}}">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <nav>
@@ -24,10 +25,10 @@
                                         <p>Precio: ${{$hombre->precio}}</p>
                                         @if ($hombre->stock > 0)
                                         <p>Stock: {{$hombre->stock}}</p>
-                                        <a href="#" class="btn btn-primary">Comprar</a>
+                                        <a href="/agregarProducto/{{$hombre->id}}/home" class="btn btn-primary">Agregar al carrito</a>
                                         @else
                                         <p>Stock <span class="badge bg-danger">Agotado</span></p>
-                                        <a href="#" class="btn btn-primary disabled" tabindex="-1" role="button" aria-disabled="true">Comprar</a>
+                                        <a href="" class="btn btn-primary disabled" tabindex="-1" role="button" aria-disabled="true">Agregar al carrito</a>
                                         @endif
                                     </div>
                                 </div>
@@ -85,4 +86,7 @@
         </div>
     </div>
 </div>
+@endsection
+@section('scripts')
+    <script src="{{ asset('js/home.js') }}"></script>
 @endsection

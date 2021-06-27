@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\CompraProducto;
 use App\Producto;
 use Illuminate\Http\Request;
 
@@ -27,6 +28,7 @@ class HomeController extends Controller
         $hombres = Producto::where('categoria', 'Hombre')->get();
         $mujeres = Producto::where('categoria', 'Mujer')->get();
         $niños = Producto::where('categoria', 'Niño')->get();
-        return view('home', ['hombres' => $hombres,'mujeres' => $mujeres,'niños' => $niños]);
+        $productos = CompraProducto::sum('cantidad');
+        return view('home', ['hombres' => $hombres,'mujeres' => $mujeres,'niños' => $niños, 'productos' => $productos]);
     }
 }

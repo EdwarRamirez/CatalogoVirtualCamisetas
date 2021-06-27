@@ -85,7 +85,7 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="btn btn-primary position-relative" role="button" data-bs-toggle="button">
+                                <a href="/mostrarProductos" class="btn btn-primary position-relative">
                                     <i class="bi bi-cart4"></i>
                                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="totalProductos"></span>
                                 </a>
