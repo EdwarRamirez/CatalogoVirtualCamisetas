@@ -40,6 +40,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/busqueda">Búsqueda Avanzada</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/compras">Compras</a>
+                        </li>
                         @endauth
                     </ul>
 
@@ -80,6 +83,12 @@
                                         @csrf
                                     </form>
                                 </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="btn btn-primary position-relative" role="button" data-bs-toggle="button">
+                                    <i class="bi bi-cart4"></i>
+                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="totalProductos"></span>
+                                </a>
                             </li>
                         @endguest
                     </ul>
