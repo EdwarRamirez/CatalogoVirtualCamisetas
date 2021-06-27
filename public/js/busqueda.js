@@ -1,6 +1,9 @@
 'use strict';
 
 window.onload = function() {
+    if (document.getElementById('produtosComprados').value > 0) {
+        document.getElementById('totalProductos').innerText = document.getElementById('produtosComprados').value;
+    }
     if (document.getElementById('filtros').value !== '') {
         let arrayFiltro = document.getElementById('filtros').value.split('|');
         arrayFiltro.pop();

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\CompraProducto;
 use App\Producto;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -15,7 +16,8 @@ class BusquedaController extends Controller
      */
     public function show()
     {
-        return view('busqueda', ['productos' => Producto::all(), 'filtro' => '']);
+        $carrito = CompraProducto::sum('cantidad');
+        return view('busqueda', ['productos' => Producto::all(), 'filtro' => '', 'carrito' => $carrito]);
     }
 
     /**
@@ -30,6 +32,7 @@ class BusquedaController extends Controller
         $productos = DB::table('productos')
             ->whereRaw($condicion)
             ->get();
-        return view('busqueda', ['productos' => $productos, 'filtro' => $filtro]);
+        $carrito = CompraProducto::sum('cantidad');
+        return view('busqueda', ['productos' => $productos, 'filtro' => $filtro, 'carrito' => $carrito]);
     }
 }

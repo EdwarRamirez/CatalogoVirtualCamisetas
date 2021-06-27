@@ -2,6 +2,7 @@
 
 @section('content')
     <div class="container">
+        <input type="hidden" id="produtosComprados" name="produtosComprados" value="{{$carrito}}">
         <div class="row">
             <div class="col-4">
                 <input type="hidden" id="filtros" name="filtros" value="{{$filtro}}">
@@ -132,10 +133,10 @@
                                     <p>Precio: ${{$producto->precio}}</p>
                                     @if ($producto->stock > 0)
                                     <p>Stock: {{$producto->stock}}</p>
-                                    <a href="#" class="btn btn-primary">Comprar</a>
+                                    <a href="/agregarProducto/{{$producto->id}}/busqueda" class="btn btn-primary">Agregar</a>
                                     @else
                                     <p>Stock <span class="badge bg-danger">Agotado</span></p>
-                                    <a href="#" class="btn btn-primary disabled" tabindex="-1" role="button" aria-disabled="true">Comprar</a>
+                                    <a href="" class="btn btn-primary disabled" tabindex="-1" role="button" aria-disabled="true">Agregar</a>
                                     @endif
                                 </div>
                             </div>

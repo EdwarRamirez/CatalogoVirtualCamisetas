@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <input type="hidden" id="produtosComprados" name="produtosComprados" value="{{$productos}}">
+    <input type="hidden" id="produtosComprados" name="produtosComprados" value="{{$carrito}}">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <nav>
