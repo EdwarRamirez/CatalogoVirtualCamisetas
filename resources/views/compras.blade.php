@@ -2,6 +2,7 @@
 
 @section('content')
     <div class="container">
+        <input type="hidden" id="produtosComprados" name="produtosComprados" value="{{$carrito}}">
         <div class="row">
             <div class="col">
                 <h3 class="text-center">Lista de compras hechas por el usuario {{ Auth::user()->name }}</h3>
@@ -30,4 +31,7 @@
             </div>
         </div>
     </div>
+@endsection
+@section('scripts')
+    <script src="{{ asset('js/home.js') }}"></script>
 @endsection

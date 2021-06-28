@@ -20,7 +20,8 @@ class CompraController extends Controller
         $usuario = Auth::user()->name;
         $compras = Compra::where('usuario', $usuario)
             ->get();
-        return view('compras', ['compras' => $compras]);
+        $carrito = CompraProducto::sum('cantidad');
+        return view('compras', ['compras' => $compras, 'carrito' => $carrito]);
     }
 
     /**
