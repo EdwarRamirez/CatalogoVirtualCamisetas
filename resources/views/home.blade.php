@@ -48,10 +48,10 @@
                                         <p>Precio: ${{$mujer->precio}}</p>
                                         @if ($mujer->stock > 0)
                                         <p>Stock: {{$mujer->stock}}</p>
-                                        <a href="#" class="btn btn-primary">Comprar</a>
+                                        <a href="/agregarProducto/{{$mujer->id}}/home" class="btn btn-primary">Agregar al carrito</a>
                                         @else
                                         <p>Stock <span class="badge bg-danger">Agotado</span></p>
-                                        <a href="#" class="btn btn-primary disabled" tabindex="-1" role="button" aria-disabled="true">Comprar</a>
+                                        <a href="" class="btn btn-primary disabled" tabindex="-1" role="button" aria-disabled="true">Agregar al carrito</a>
                                         @endif
                                     </div>
                                 </div>
@@ -71,10 +71,10 @@
                                         <p>Precio: ${{$niño->precio}}</p>
                                         @if ($niño->stock > 0)
                                         <p>Stock: {{$niño->stock}}</p>
-                                        <a href="#" class="btn btn-primary">Comprar</a>
+                                        <a href="/agregarProducto/{{$niño->id}}/home" class="btn btn-primary">Agregar al carrito</a>
                                         @else
                                         <p>Stock <span class="badge bg-danger">Agotado</span></p>
-                                        <a href="#" class="btn btn-primary disabled" tabindex="-1" role="button" aria-disabled="true">Comprar</a>
+                                        <a href="" class="btn btn-primary disabled" tabindex="-1" role="button" aria-disabled="true">Agregar al carrito</a>
                                         @endif
                                     </div>
                                 </div>
