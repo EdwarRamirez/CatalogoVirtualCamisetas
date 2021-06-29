@@ -60,12 +60,14 @@
                             @endif
                         @else
                             <li>
-                                <form class="d-flex">
+                                <div class="d-flex">
                                     <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder="Buscar producto" aria-label="Buscar producto" aria-describedby="basic-addon2">
-                                        <span class="input-group-text" id="basic-addon2"><i class="bi bi-search"></i></span>
+                                        <input type="text" class="form-control" id="textBusquedaBasica" placeholder="Buscar producto" aria-label="Buscar producto" aria-describedby="basic-addon2" onkeyup="addLink(this.value);">
+                                        <span class="input-group-text" id="basic-addon2">
+                                            <a href="" id="linkBusquedaBasica" style="color: #495057;"><i class="bi bi-search"></i></a>
+                                        </span>
                                     </div>
-                                </form>
+                                </div>
                             </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
